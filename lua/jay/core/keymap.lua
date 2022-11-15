@@ -8,8 +8,6 @@ keymap.set("i", "jk", "<ESC>")
 
 -- normal mode
 keymap.set("n", "x", '"_x')             -- 删除而不是剪切
-keymap.set("n", "<leader>+", "<C-a>")   -- 增加数值
-keymap.set("n", "<leader>-", "<C-x>")   -- 减小数值
 
 ----- split window
 keymap.set("n", "<leader>sv", "<C-w>v")     -- split vertically
@@ -17,16 +15,22 @@ keymap.set("n", "<leader>sh", "<C-w>s")     -- split horizontally
 keymap.set("n", "<leader>se", "<C-w>=")     -- adjust split windows to the same height/width
 keymap.set("n", "<leader>sc", ":close<CR>") -- close current split window
 
--- tab management
-keymap.set("n", "<leader>tt", ":tabnew<CR>")   -- new tab
-keymap.set("n", "<leader>x", ":tabclose<CR>")  -- close current tab
-keymap.set("n", "<leader>n", ":tabn<CR>")    -- next tab
-keymap.set("n", "<leader>m", ":tabp<CR>")    -- previous tab
+-- move between windows
+keymap.set("n", "<C-LEFT>", ":TmuxNavigateLeft<CR>")
+keymap.set("n", "<C-RIGHT>", ":TmuxNavigateRight<CR>")
+keymap.set("n", "<C-UP>", ":TmuxNavigateUp<CR>")
+keymap.set("n", "<C-DOWN>", ":TmuxNavigateDown<CR>")
+
+-- tab management, using bufferline.nvim
+keymap.set("n", "<M-RIGHT>", ":BufferLineCycleNext<CR>")    -- select next tab
+keymap.set("n", "<M-LEFT>",  ":BufferLineCyclePrev<CR>")    -- select previous tab
+keymap.set("n", "<leader>b", ":BufferLinePick<CR>")         -- pick up a tab
+keymap.set("n", "<leader>x", ":BufferLinePickClose<CR>")    -- pick up a tab to close
 
 -------- Native mappings
 -- home / end
-keymap.set("n", "<M-LEFT>", "^")
-keymap.set("n", "<M-RIGHT>", "$")
+keymap.set("n", "<S-LEFT>", "^")
+keymap.set("n", "<S-RIGHT>", "$")
 
 -- folding
 keymap.set("v", "<BS>", "zf")   -- fold selected lines
@@ -44,6 +48,7 @@ keymap.set("n", "W", "B")
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>m", ":NvimTreeFocus<CR>")
 -- keymap.set("n", "<Left>", ":NvimTreeCollapes")
 -- keymap.set("n", "<Right>", ":NvimTreeOpen")
 -- fuzzy finder / telescope

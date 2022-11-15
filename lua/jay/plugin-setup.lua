@@ -16,6 +16,7 @@ augroup packer_user_config
 autocmd!
 autocmd BufWritePost plugin-setup.lua source <afile> | PackerCompile
 augroup end
+set guifont=JetBrainsMono:h14
 ]])
 
 
@@ -67,35 +68,35 @@ return packer.startup(function(use)
     use { "jose-elias-alvarez/typescript.nvim" }
     use { "onsails/lspkind.nvim" }
     -- formatting & linting
-    use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-    use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+    use { "jose-elias-alvarez/null-ls.nvim" } -- configure formatters & linters
+    use { "jayp0521/mason-null-ls.nvim" } -- bridges gap b/w mason & null-ls
 
     -- -- treesitter configuration
-    -- use({
+    -- use {
     --     "nvim-treesitter/nvim-treesitter",
     --     run = function()
     --         local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
     --         ts_update()
     --     end,
-    -- })
+    -- } 
 
     -- auto closing
-    use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+    use { "windwp/nvim-autopairs" } -- autoclose parens, brackets, quotes, etc...
     -- use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
     -- git integration
-    use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+    use { "lewis6991/gitsigns.nvim" } -- show line modifications on left hand side
     use {
-        'goolord/alpha-nvim',
+        "goolord/alpha-nvim",
         config = function ()
-            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+            require'alpha'.setup(require"alpha.themes.dashboard".config)
         end
     }
     -- using packer.nvim
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" }
 
     -- Put this at the end after all plugins
     if packer_bootstrap then
-        require('packer').sync()
+        require("packer").sync()
     end
 end)
