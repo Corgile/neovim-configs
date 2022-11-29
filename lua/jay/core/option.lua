@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- line number
-opt.relativenumber = false
+opt.relativenumber = true
 opt.number = true
 
 -- tab & indentation
@@ -43,4 +43,4 @@ opt.iskeyword:append("-")
 opt.cmdheight = 2
 
 -- keep cursorline in the middle of the screen
-opt.so = 16
+opt.so = 999

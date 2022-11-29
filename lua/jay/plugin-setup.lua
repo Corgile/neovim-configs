@@ -85,12 +85,12 @@ return packer.startup(function(use)
 
     -- git integration
     use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-    use {
-        'goolord/alpha-nvim',
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.dashboard'.config)
-        end
-    }
+    --use {
+    --    'goolord/alpha-nvim',
+    --    config = function ()
+    --        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    --    end
+    --}
     -- using packer.nvim
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
     use { "feline-nvim/feline.nvim" }

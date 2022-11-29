@@ -11,7 +11,7 @@ require("jay.core.themes")
 require("jay.plugin.comment")   -- 注释
 require("jay.plugin.nvim-tree") -- 文件树
 require("jay.plugin.lualine")   -- lualine
-require("jay.plugin.telescope") -- fuzzy finder
+-- require("jay.plugin.telescope") -- fuzzy finder
 require("jay.plugin.nvim-cmp")  -- 自动补全
 
 require("jay.plugin.lsp.mason") -- LSP

@@ -10,6 +10,8 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "x", '"_x')             -- 删除而不是剪切
 keymap.set("n", "<LEADER>+", "<C-a>")   -- 增加数值
 keymap.set("n", "<LEADER>-", "<C-x>")   -- 减小数值
+keymap.set("n", "S", ":w<CR>")   -- 减小数值
+keymap.set("n", "Q", ":wq<CR>")   -- 减小数值
 
 ----- split window
 keymap.set("n", "<LEADER>sv", "<C-w>v")     -- split vertically
