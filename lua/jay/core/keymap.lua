@@ -36,7 +36,7 @@ keymap.set("n", "<S-RIGHT>", "$")
 
 -- folding
 keymap.set("v", "<BS>", "zf")   -- fold selected lines
-keymap.set("n", "-", "zfi{")     -- -{  fold between {} 
+keymap.set("n", "-", "zfi")     -- -{  fold between {} 
 -- previous / next edited place
 keymap.set("n", "<M-,>", "g;")
 keymap.set("n", "<M-.>", "g,")

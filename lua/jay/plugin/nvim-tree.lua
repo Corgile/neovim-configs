@@ -33,15 +33,19 @@ nvimtree.setup({
         centralize_selection = false,
         width = 40,
         hide_root_folder = false,
-        side = "right",
+        side = "left",
         preserve_window_proportions = false,
         number = true,
-        relativenumber = false,
+        relativenumber = true,
         signcolumn = "yes",
         mappings = {
             custom_only = false,
             list = {
                 -- user mappings go here
+                { key = { "<RIGHT>" }, action = "edit" },
+                { key = { "<LEFT>"  }, action = "close_node" },
+                { key = { "<S-LEFT>"}, action = "parent_node" },
+                { key = { "<S-UP>"  }, action = "dir_up", mode = "n" },
             },
         },
         float = {
