@@ -41,6 +41,8 @@ keymap.set("n", "<M-.>", "g,")
 -- moving by word
 keymap.set("n", "w", "b")
 keymap.set("n", "W", "B")
+-- macro
+keymap.set("n", "<C-CR>", "@z")
 
 ------ Plugin keymaps
 
