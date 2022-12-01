@@ -24,6 +24,7 @@ return packer.startup(function(use)
     -- colorschemes
     use { "bluz71/vim-nightfly-guicolors" }
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "folke/tokyonight.nvim" }
     use { "JoosepAlviste/palenightfall.nvim" }
     -- tmux & split window navigation
     use { "christoomey/vim-tmux-navigator" }

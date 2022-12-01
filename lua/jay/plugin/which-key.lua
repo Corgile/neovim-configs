@@ -88,15 +88,15 @@ local mappings = {
     ["w"] = { "<cmd>w!<CR>", "Save !" },
     ["q"] = { "<cmd>q!<CR>", "Quit !" },
     -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-    ["h"] = { "<cmd>nohlsearch<CR>", "nohl search" },
+    ["n"] = { "<cmd>nohlsearch<CR>", "nohl search" },
     ["f"] = {
         "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Find File in Project",
     },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find in Text" },
-    ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Recent Projects" },
+    ["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Recent Projects" },
 
-    p = {
+    P = {
         name = "Packer",
         c = { "<cmd>PackerCompile<cr>", "Compile" },
         i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -105,7 +105,7 @@ local mappings = {
         u = { "<cmd>PackerUpdate<cr>", "Update All Plugins" },
     },
 
-    g = {
+    G = {
         name = "Git",
         g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
         j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -128,7 +128,7 @@ local mappings = {
         },
     },
 
-    l = {
+    L = {
         name = "LSP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
         d = {
@@ -159,7 +159,7 @@ local mappings = {
             "Workspace Symbols",
         },
     },
-    s = {
+    S = {
         name = "Search",
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -171,7 +171,7 @@ local mappings = {
         C = { "<cmd>Telescope commands<cr>", "Commands" },
     },
 
-    t = {
+    T = {
         name = "Terminal",
         -- n = { "<cmd>lua _NODE_TOGGLE()<cr>", "NodeJs 命令行" },
         -- u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },

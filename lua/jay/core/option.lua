@@ -7,7 +7,7 @@ opt.number = true
 -- tab & indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = true
+opt.expandtab = false
 opt.autoindent = true
 
 -- line wrapping
@@ -40,7 +40,7 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 -- cmd height
-opt.cmdheight = 2
+opt.cmdheight = 1
 
 -- keep cursorline in the middle of the screen
 opt.so = 999

@@ -52,6 +52,7 @@ keymap.set("n", "<C-CR>", "@z")
 keymap.set("n", "<LEADER>sm", ":MaximizerToggle<CR>")
 -- nvim-tree
 keymap.set("n", "<LEADER>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<LEADER>/", ":NvimTreeFindFile<CR>")
 -- keymap.set("n", "<LEADER>m", ":NvimTreeFocus<CR>")
 -- keymap.set("n", "<Left>", ":NvimTreeCollapes")
 -- keymap.set("n", "<Right>", ":NvimTreeOpen")
