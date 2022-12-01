@@ -3,13 +3,13 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- isert mode
-keymap.set("i", "jk", "<ESC>")
+-- keymap.set("i", "jk", "<ESC>")
 
 
 -- normal mode
 keymap.set("n", "x", '"_x')             -- 删除而不是剪切
-keymap.set("n", "<LEADER>+", "<C-a>")   -- 增加数值
-keymap.set("n", "<LEADER>-", "<C-x>")   -- 减小数值
+-- keymap.set("n", "<LEADER>+", "<C-a>")   -- 增加数值
+-- keymap.set("n", "<LEADER>-", "<C-x>")   -- 减小数值
 keymap.set("n", "S", ":w<CR>")   -- 减小数值
 keymap.set("n", "Q", ":wq<CR>")   -- 减小数值
 
@@ -52,14 +52,14 @@ keymap.set("n", "<C-CR>", "@z")
 keymap.set("n", "<LEADER>sm", ":MaximizerToggle<CR>")
 -- nvim-tree
 keymap.set("n", "<LEADER>e", ":NvimTreeToggle<CR>")
-keymap.set("n", "<LEADER>m", ":NvimTreeFocus<CR>")
+-- keymap.set("n", "<LEADER>m", ":NvimTreeFocus<CR>")
 -- keymap.set("n", "<Left>", ":NvimTreeCollapes")
 -- keymap.set("n", "<Right>", ":NvimTreeOpen")
 -- fuzzy finder / telescope
-keymap.set("n", "<LEADER>ff", "<cmd>Telescope find_files<CR>")
-keymap.set("n", "<LEADER>fs", "<cmd>Telescope live_grep<CR>")
-keymap.set("n", "<LEADER>fc", "<cmd>Telescope grep_string<CR>")
-keymap.set("n", "<LEADER>fb", "<cmd>Telescope buffers<CR>")
-keymap.set("n", "<LEADER>fh", "<cmd>Telescope help_tags<CR>")
+-- keymap.set("n", "<LEADER>ff", "<cmd>Telescope find_files<CR>")
+-- keymap.set("n", "<LEADER>fs", "<cmd>Telescope live_grep<CR>")
+-- keymap.set("n", "<LEADER>fc", "<cmd>Telescope grep_string<CR>")
+-- keymap.set("n", "<LEADER>fb", "<cmd>Telescope buffers<CR>")
+-- keymap.set("n", "<LEADER>fh", "<cmd>Telescope help_tags<CR>")
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<LEADER>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

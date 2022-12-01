@@ -11,14 +11,6 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-vim.cmd([[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugin-setup.lua source <afile> | PackerCompile
-augroup end
-]])
-
-
 local ok, packer = pcall(require, "packer")
 
 if not ok then return end
@@ -32,6 +24,7 @@ return packer.startup(function(use)
     -- colorschemes
     use { "bluz71/vim-nightfly-guicolors" }
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "JoosepAlviste/palenightfall.nvim" }
     -- tmux & split window navigation
     use { "christoomey/vim-tmux-navigator" }
     use { "szw/vim-maximizer" }   -- maximize and restore split window
@@ -53,6 +46,8 @@ return packer.startup(function(use)
     use { "hrsh7th/nvim-cmp" }
     use { "hrsh7th/cmp-buffer" }
     use { "hrsh7th/cmp-path" }
+    use { "hrsh7th/cmp-nvim-lsp", commit = "3cf38d9c957e95c397b66f91967758b31be4abe6" }
+    use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
     -- snippets
     use { "L3MON4D3/LuaSnip" }
     use { "saadparwaiz1/cmp_luasnip" }
@@ -69,15 +64,21 @@ return packer.startup(function(use)
     -- formatting & linting
     use { "jose-elias-alvarez/null-ls.nvim" } -- configure formatters & linters
     use { "jayp0521/mason-null-ls.nvim" } -- bridges gap b/w mason & null-ls
+    -- which key
+    use { "folke/which-key.nvim" }
 
-    -- -- treesitter configuration
-    -- use({
-    --     "nvim-treesitter/nvim-treesitter",
-    --     run = function()
-    --         local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-    --         ts_update()
-    --     end,
-    -- })
+    -- treesitter configuration
+    use({
+        "nvim-treesitter/nvim-treesitter",
+        run = function()
+            local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+            ts_update()
+        end,
+    })
+
+    use { "lukas-reineke/indent-blankline.nvim" }
+    use { "ahmedkhalf/project.nvim" }
+    use { "akinsho/toggleterm.nvim" }
 
     -- auto closing
     use { "windwp/nvim-autopairs" } -- autoclose parens, brackets, quotes, etc...
@@ -92,7 +93,7 @@ return packer.startup(function(use)
     --    end
     --}
     -- using packer.nvim
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    use { "akinsho/bufferline.nvim", tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
     use { "feline-nvim/feline.nvim" }
     -- Put this at the end after all plugins
     if packer_bootstrap then
