@@ -69,13 +69,13 @@ return packer.startup(function(use)
     use { "folke/which-key.nvim" }
 
     -- treesitter configuration
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = function()
-            local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-            ts_update()
-        end,
-    })
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	}
 
     use { "lukas-reineke/indent-blankline.nvim" }
     use { "ahmedkhalf/project.nvim" }

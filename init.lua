@@ -20,7 +20,7 @@ require("jay.plugin.lsp.lspconfig")
 require("jay.plugin.lsp.null-ls")
 
 require("jay.plugin.autopair")
-require("jay.plugin.tree-sitter")
+-- require("jay.plugin.tree-sitter")
 require("jay.plugin.gitsigns")
 require("jay.plugin.bufferline")
 require("jay.plugin.feline")
