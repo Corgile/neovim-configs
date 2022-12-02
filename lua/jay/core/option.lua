@@ -1,13 +1,13 @@
 local opt = vim.opt
 
 -- line number
-opt.relativenumber = false
+opt.relativenumber = true
 opt.number = true
 
 -- tab & indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = true
+opt.expandtab = false
 opt.autoindent = true
 
 -- line wrapping
@@ -28,9 +28,10 @@ opt.signcolumn = "yes"
 
 -- backspace
 opt.backspace = "indent,eol,start"
+opt.guifont = "JetBrainsMono:14"
 
---clipboard: force nvim to use system clipboard with yank operation 
-opt.clipboard:append("unnamedplus")
+--clipboard: force nvim to use system clipboard with yank operation
+-- opt.clipboard:append("unnamedplus")
 
 -- split window
 opt.splitright = true
@@ -40,7 +41,7 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 -- cmd height
-opt.cmdheight = 2
+opt.cmdheight = 1
 
 -- keep cursorline in the middle of the screen
-opt.so = 16
+opt.so = 999

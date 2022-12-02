@@ -10,10 +10,10 @@ mason.setup({
 })
 
 mason_config.setup({
-    ensure_installed = {
-        "html",
-        "cssls",
-        "sumneko_lua",
-        "clangd"
-    }
+	ensure_installed = {
+		"html",
+		"cssls",
+		"sumneko_lua",
+		"clangd"
+	}
 })
