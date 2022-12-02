@@ -69,6 +69,14 @@ return packer.startup(function(use)
 	-- which key
 	use({ "folke/which-key.nvim" })
 
+	use({ 
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
+
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "ahmedkhalf/project.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
