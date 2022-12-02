@@ -16,11 +16,11 @@ require("jay.plugin.nvim-cmp") -- 自动补全
 -- LSP
 require("jay.plugin.lsp.mason") -- LSP
 require("jay.plugin.lsp.lspsaga")
--- require("jay.plugin.lsp.lspconfig")
+require("jay.plugin.lsp.lspconfig")
 require("jay.plugin.lsp.null-ls")
 
 require("jay.plugin.autopair")
--- require("jay.plugin.tree-sitter")
+require("jay.plugin.tree-sitter")
 require("jay.plugin.gitsigns")
 require("jay.plugin.bufferline")
 require("jay.plugin.feline")

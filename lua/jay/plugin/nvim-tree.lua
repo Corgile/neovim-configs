@@ -84,7 +84,7 @@ nvimtree.setup({
 			webdev_colors = true,
 			git_placement = "before",
 			padding = " ",
-			symlink_arrow = " ➛ ",
+			symlink_arrow = " ⇨ ",
 			show = {
 				file = true,
 				folder = true,
@@ -96,7 +96,7 @@ nvimtree.setup({
 				symlink = "",
 				bookmark = "",
 				folder = {
-					arrow_closed = "",
+					arrow_closed = "›",
 					arrow_open = "",
 					default = "",
 					open = "",
@@ -110,7 +110,7 @@ nvimtree.setup({
 					staged = "✓",
 					unmerged = "",
 					renamed = "➜",
-					untracked = "★",
+					untracked = "+",
 					deleted = "",
 					ignored = "◌",
 				},

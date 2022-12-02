@@ -1,7 +1,7 @@
 local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_ok then return end
 
-local cmp_lsp_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+local cmp_lsp_ok, cmp_lsp = pcall(require, "cmp-nvim-lsp")
 if not cmp_lsp_ok then return end
 
 local ts_ok, ts = pcall(require, "typescript")
