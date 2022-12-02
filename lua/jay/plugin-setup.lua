@@ -36,7 +36,7 @@ return packer.startup(function(use)
 	-- comment with gc
 	use({ "numToStr/Comment.nvim" })
 	-- file explore, nvim-tree
-	use({ "nvim-tree/nvim-tree.lua" })
+	-- use({ "nvim-tree/nvim-tree.lua" })
 	-- icons
 	use({ "kyazdani42/nvim-web-devicons" })
 	-- status line

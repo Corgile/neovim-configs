@@ -82,27 +82,27 @@ indent_blankline.setup({
 -- vim.cmd [[highlight IndentBlanklineIndent2 guibg=#313345 gui=nocombine]]
 --
 -- require("indent_blankline").setup {
---     char = "",
---     char_highlight_list = {
---         "IndentBlanklineIndent1",
---         "IndentBlanklineIndent2",
---     },
---     space_char_highlight_list = {
---         "IndentBlanklineIndent1",
---         "IndentBlanklineIndent2",
---     },
---     show_trailing_blankline_indent = false,
--- }
+	--     char = "",
+	--     char_highlight_list = {
+		--         "IndentBlanklineIndent1",
+		--         "IndentBlanklineIndent2",
+		--     },
+		--     space_char_highlight_list = {
+			--         "IndentBlanklineIndent1",
+			--         "IndentBlanklineIndent2",
+			--     },
+			--     show_trailing_blankline_indent = false,
+			-- }
 
-----------------------------------------------------------------
--- 没有花里胡哨
-----------------------------------------------------------------
--- vim.opt.list = true
--- vim.opt.listchars:append "space:⋅"
--- -- vim.opt.listchars:append "eol:↴"
---
--- require("indent_blankline").setup {
---     space_char_blankline = " ",
---     show_current_context = true,
---     show_current_context_start = true,
--- }
+			----------------------------------------------------------------
+			-- 没有花里胡哨
+			----------------------------------------------------------------
+			-- vim.opt.list = true
+			-- vim.opt.listchars:append "space:⋅"
+			-- -- vim.opt.listchars:append "eol:↴"
+			--
+			-- require("indent_blankline").setup {
+				--     space_char_blankline = " ",
+				--     show_current_context = true,
+				--     show_current_context_start = true,
+				-- }
