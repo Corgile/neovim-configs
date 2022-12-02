@@ -215,6 +215,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\corgi\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
+  ["vim-latex-live-preview"] = {
+    loaded = true,
+    path = "C:\\Users\\corgi\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-latex-live-preview",
+    url = "https://github.com/xuhdev/vim-latex-live-preview"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "C:\\Users\\corgi\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-maximizer",
@@ -234,6 +239,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\corgi\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  vimtex = {
+    loaded = true,
+    path = "C:\\Users\\corgi\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
