@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 23,
+	size = 20,
 	open_mapping = [[<C-t>]],
 	hide_numbers = true,
 	shade_filetypes = {},
@@ -27,17 +27,17 @@ toggleterm.setup({
 })
 
 function _G.set_terminal_keymaps()
-	local opts = {noremap = true}
+	local opts = { noremap = true }
 	-- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
 	-- vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
 	-- 移动光标焦点
-	vim.api.nvim_buf_set_keymap(0, 't', '<C-LEFT>', [[<C-\><C-n><C-W>h]], opts)
-	vim.api.nvim_buf_set_keymap(0, 't', '<C-DOWN>', [[<C-\><C-n><C-W>j]], opts)
-	vim.api.nvim_buf_set_keymap(0, 't', '<C-UP>', [[<C-\><C-n><C-W>k]], opts)
-	vim.api.nvim_buf_set_keymap(0, 't', '<C-RIGHT>', [[<C-\><C-n><C-W>l]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-LEFT>", [[<C-\><C-n><C-W>h]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-DOWN>", [[<C-\><C-n><C-W>j]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-UP>", [[<C-\><C-n><C-W>k]], opts)
+	vim.api.nvim_buf_set_keymap(0, "t", "<C-RIGHT>", [[<C-\><C-n><C-W>l]], opts)
 end
 
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
