@@ -29,7 +29,7 @@ opt.signcolumn = "yes"
 -- backspace
 opt.backspace = "indent,eol,start"
 
---clipboard: force nvim to use system clipboard with yank operation 
+--clipboard: force nvim to use system clipboard with yank operation
 opt.clipboard:append("unnamedplus")
 
 -- split window
@@ -43,4 +43,4 @@ opt.iskeyword:append("-")
 opt.cmdheight = 1
 
 -- keep cursorline in the middle of the screen
-opt.so = 999
+opt.so = 10
