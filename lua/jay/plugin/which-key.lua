@@ -95,7 +95,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find in Text" },
 	["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Recent Projects" },
-
+	["Enter"] = { "<cmd>lua ReloadConfig()<CR>", "Reload Neovim Configs" },
 	P = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -104,7 +104,6 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Plugin Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update All Plugins" },
 	},
-
 	G = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -127,7 +126,6 @@ local mappings = {
 			"Diff",
 		},
 	},
-
 	L = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -170,7 +168,6 @@ local mappings = {
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
-
 	T = {
 		name = "Terminal",
 		-- n = { "<cmd>lua _NODE_TOGGLE()<cr>", "NodeJs 命令行" },
