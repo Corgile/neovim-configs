@@ -1,6 +1,7 @@
 local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then return end
-
+if not setup then
+	return
+end
 
 -- some configurations from the doc
 vim.g.loaded = 1
@@ -30,7 +31,7 @@ nvimtree.setup({
 	select_prompts = false,
 	view = {
 		adaptive_size = true,
-		centralize_selection = false,
+		centralize_selection = true,
 		width = 40,
 		hide_root_folder = false,
 		side = "left",
@@ -43,9 +44,9 @@ nvimtree.setup({
 			list = {
 				-- user mappings go here
 				{ key = { "<RIGHT>" }, action = "edit" },
-				{ key = { "<LEFT>"  }, action = "close_node" },
-				{ key = { "<S-LEFT>"}, action = "parent_node" },
-				{ key = { "<S-UP>"  }, action = "dir_up", mode = "n" },
+				{ key = { "<LEFT>" }, action = "close_node" },
+				{ key = { "<S-LEFT>" }, action = "parent_node" },
+				{ key = { "<S-UP>" }, action = "dir_up", mode = "n" },
 			},
 		},
 		float = {
@@ -96,8 +97,8 @@ nvimtree.setup({
 				symlink = "",
 				bookmark = "",
 				folder = {
-					arrow_closed = "›",
-					arrow_open = "",
+					arrow_closed = "",
+					arrow_open = "",
 					default = "",
 					open = "",
 					empty = "",
