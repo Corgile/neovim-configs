@@ -31,6 +31,7 @@ require("jay.plugin.toggleterm") -- 打开terminal
 require("jay.plugin.home-page") -- 打开terminal
 -- ui
 require("jay.plugin.ui.feline") -- lualine
+require("jay.plugin.ui.colorizer") -- lualine
 -- notify
 require("jay.plugin.notify")
 require("jay.plugin.reload-config")

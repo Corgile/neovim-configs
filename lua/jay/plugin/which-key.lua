@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-	-- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+	["a"] = { "<cmd>Alpha<cr>", "Startup Page" },
 	["b"] = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
@@ -95,7 +95,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find in Text" },
 	["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Recent Projects" },
-	["Enter"] = { "<cmd>lua ReloadConfig()<CR>", "Reload Neovim Configs" },
+	["<CR>"] = { "<cmd>lua ReloadConfig()<CR>", "Reload Neovim Configs" },
 	P = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },

@@ -68,7 +68,8 @@ return packer.startup(function(use)
 	use({ "jayp0521/mason-null-ls.nvim" }) -- bridges gap b/w mason & null-ls
 	-- which key
 	use({ "folke/which-key.nvim" })
-
+	-- colorizer
+	use({ "NvChad/nvim-colorizer.lua" })
 	-- treesitter configuration
 	use({
 		"nvim-treesitter/nvim-treesitter",
