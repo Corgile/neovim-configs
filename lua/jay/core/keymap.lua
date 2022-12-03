@@ -52,9 +52,7 @@ keymap.set("n", "<LEADER>sm", ":MaximizerToggle<CR>")
 -- nvim-tree
 keymap.set("n", "<LEADER>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<LEADER>/", ":NvimTreeFindFile<CR>")
--- keymap.set("n", "<LEADER>m", ":NvimTreeFocus<CR>")
--- keymap.set("n", "<Left>", ":NvimTreeCollapes")
--- keymap.set("n", "<Right>", ":NvimTreeOpen")
+-- reload configuration
 -- fuzzy finder / telescope
 -- keymap.set("n", "<LEADER>ff", "<cmd>Telescope find_files<CR>")
 -- keymap.set("n", "<LEADER>fs", "<cmd>Telescope live_grep<CR>")
