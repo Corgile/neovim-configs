@@ -30,9 +30,9 @@ nvimtree.setup({
 	remove_keymaps = false,
 	select_prompts = false,
 	view = {
-		adaptive_size = true,
-		centralize_selection = true,
-		width = 40,
+		adaptive_size = false,
+		centralize_selection = false,
+		width = 35,
 		hide_root_folder = false,
 		side = "left",
 		preserve_window_proportions = false,
@@ -45,8 +45,9 @@ nvimtree.setup({
 				-- user mappings go here
 				{ key = { "<RIGHT>" }, action = "edit" },
 				{ key = { "<LEFT>" }, action = "close_node" },
-				{ key = { "<S-LEFT>" }, action = "parent_node" },
-				{ key = { "<S-UP>" }, action = "dir_up", mode = "n" },
+				{ key = { "<S-RIGHT>" }, action = "next_sibling" },
+				{ key = { "<S-LEFT>" }, action = "prev_sibling" },
+				{ key = { "<C-CR>" }, action = "cd" },
 			},
 		},
 		float = {
@@ -202,8 +203,8 @@ nvimtree.setup({
 		require_confirm = true,
 	},
 	live_filter = {
-		prefix = "[FILTER]: ",
-		always_show_folders = true,
+		prefix = "[GREP FILE]: ",
+		always_show_folders = false,
 	},
 	log = {
 		enable = false,
