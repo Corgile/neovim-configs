@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 local ok, packer = pcall(require, "packer")
 
 if not ok then
+	vim.notify("packer 没找到")
 	return
 end
 
@@ -44,6 +45,7 @@ return packer.startup(function(use)
 	-- fuzzy finder
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+	use({ "puremourning/vimspector" })
 	-- auto completion
 	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-buffer" })
@@ -87,6 +89,11 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-autopairs" }) -- autoclose parens, brackets, quotes, etc...
 	-- use { "windwp/nvim-ts-autotag", after = "nvim-treesitter" } -- autoclose tags
 	use({ "rcarriga/nvim-notify" })
+	-- debugging
+	use({ "ravenxrz/DAPInstall.nvim" })
+	use({ "mfussenegger/nvim-dap" })
+	use({ "theHamsta/nvim-dap-virtual-text" })
+	use({ "rcarriga/nvim-dap-ui" })
 
 	-- git integration
 	use({ "lewis6991/gitsigns.nvim" }) -- show line modifications on left hand side

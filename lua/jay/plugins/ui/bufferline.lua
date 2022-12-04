@@ -14,7 +14,7 @@ bufferline.setup({
 				-- end,
 				text_align = "center",
 				highlight = "Directory",
-				separator = true,
+				separator = "█",
 			},
 		},
 	},

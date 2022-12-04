@@ -10,6 +10,14 @@ opt.shiftwidth = 4
 opt.expandtab = false
 opt.autoindent = true
 
+-- options for COC.nvim (Some servers have issues with backup files, see #649.
+vim.opt.backup = false
+vim.opt.writebackup = false
+
+-- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+-- delays and poor user experience.
+vim.opt.updatetime = 300
+
 -- line wrapping
 opt.wrap = false
 
@@ -43,4 +51,4 @@ opt.iskeyword:append("-")
 opt.cmdheight = 1
 
 -- keep cursorline in the middle of the screen
-opt.so = 10
+opt.so = 99

@@ -147,9 +147,9 @@ nvimtree.setup({
 		},
 	},
 	filters = {
-		dotfiles = false,
-		custom = {},
-		exclude = {},
+		dotfiles = true,
+		custom = { "packer_compiled.lua" },
+		exclude = { ".gitignore" },
 	},
 	filesystem_watchers = {
 		enable = true,
