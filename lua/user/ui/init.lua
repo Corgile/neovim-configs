@@ -1,0 +1,5 @@
+require("user.ui._alpha")
+require("user.ui._gitsigns")
+require("user.ui._indentline")
+require("user.ui._treesitter")
+require("user.ui._lualine")

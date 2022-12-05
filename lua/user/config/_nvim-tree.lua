@@ -44,7 +44,7 @@ nvim_tree.setup {
 				},
 				git = {
 					unstaged = "",
-					staged = "S",
+					staged = "✓",
 					unmerged = "",
 					renamed = "⟶",
 					untracked = "+",
@@ -63,6 +63,11 @@ nvim_tree.setup {
 			warning = "",
 			error = "",
 		},
+	},
+	filters = {
+		dotfiles = true,
+		custom = { "packer_compiled.lua", ".DS_Store" },
+		exclude = { ".gitignore" },
 	},
 	view = {
 		width = 30,
