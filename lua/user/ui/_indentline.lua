@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-indent_blankline.setup {
+indent_blankline.setup({
 	char = "▏",
 	show_trailing_blankline_indent = false,
 	show_first_indent_level = true,
@@ -37,7 +37,7 @@ indent_blankline.setup {
 		"import_statement",
 		"operation_type",
 	},
-}
+})
 vim.wo.colorcolumn = "99999"
 ----------------------------------------------------------------
 -- 彩虹缩进线配置
@@ -67,4 +67,3 @@ indent_blankline.setup({
 		"IndentBlanklineIndent3",
 	},
 })
-

@@ -1,6 +1,6 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-  return
+	return
 end
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
@@ -16,27 +16,31 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local command_resolver = require("null-ls.helpers.command_resolver")
 
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
-null_ls.setup {
-  debug = false,
-  sources = {
-    formatting.prettier.with {
-      extra_filetypes = { "toml" },
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
-		dynamic_command = command_resolver.from_node_modules(),
-    },
-    formatting.black.with { extra_args = { "--fast" } },
-    formatting.stylua,
-    formatting.google_java_format,
+null_ls.setup({
+	debug = false,
+	sources = {
+		-- _hover,
+		-- _completion,
+		-- _code_actions,
+		formatting.prettier.with({
+			extra_filetypes = { "toml" },
+			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+			dynamic_command = command_resolver.from_node_modules(),
+		}),
+		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.stylua,
+		formatting.google_java_format,
 		formatting.prettierd, -- js/ts formatter
 		formatting.clang_format, -- lua formatter
 		formatting.cmake_format,
 		formatting.reorder_python_imports,
-    diagnostics.flake8,
+		diagnostics.flake8,
 		diagnostics.eslint_d.with({ -- js/ts linter
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
 			end,
 		}),
+	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
@@ -57,5 +61,4 @@ null_ls.setup {
 			})
 		end
 	end,
-  },
-}
+})

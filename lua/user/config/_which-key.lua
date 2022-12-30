@@ -1,0 +1,178 @@
+local status_ok, which_key = pcall(require, "which-key")
+if not status_ok then
+	return
+end
+
+local setup = {
+	plugins = {
+		marks = true, -- shows a list of your marks on ' and `
+		registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+		spelling = {
+			enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+			suggestions = 20, -- how many suggestions should be shown in the list?
+		},
+		-- the presets plugin, adds help for a bunch of default keybindings in Neovim
+		-- No actual key bindings are created
+		presets = {
+			z = true, -- bindings for folds, spelling and others prefixed with z
+			g = true, -- bindings for prefixed with g
+			nav = true, -- misc bindings to work with windows
+			windows = true, -- default bindings on <c-w>
+			motions = true, -- adds help for motions
+			text_objects = true, -- help for text objects triggered after entering an operator
+		},
+	},
+	-- add operators that will trigger motion and text object completion
+	-- to enable all native operators, set the preset / operators plugin above
+	-- operators = { gc = "Comments" },
+	key_labels = {
+		-- override the label used to display some keys. It doesn't effect WK in any other way.
+		-- For example:
+		["<SPACE>"] = "SPC",
+		["<CR>"] = "RET",
+		["<TAB>"] = "TAB",
+	},
+	icons = {
+		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+		separator = "", -- symbol used between a key and it's label
+		group = "+", -- symbol prepended to a group
+	},
+	popup_mappings = {
+		scroll_down = "<C-d>", -- binding to scroll down inside the popup
+		scroll_up = "<C-u>", -- binding to scroll up inside the popup
+	},
+	window = {
+		border = "rounded", -- none, single, double, shadow
+		position = "bottom", -- bottom, top
+		margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+		winblend = 0,
+	},
+	layout = {
+		height = { min = 4, max = 25 }, -- min and max height of the columns
+		width = { min = 20, max = 50 }, -- min and max width of the columns
+		spacing = 3, -- spacing between columns
+		align = "center", -- align columns left, center or right
+	},
+	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
+	hidden = { "<SILENT>", "<CMD>", "<CMD>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+	show_help = true, -- show help message on the command line when the popup is visible
+	-- triggers = "auto", -- automatically setup triggers
+	triggers = { "<LEADER>" }, -- or specify a list manually
+	triggers_blacklist = {
+		-- list of mode / prefixes that should never be hooked by WhichKey
+		-- this is mostly relevant for key maps that start with a native binding
+		-- most people should not need to change this
+		i = { "j", "k" },
+		v = { "j", "k" },
+	},
+}
+
+local mappings = {
+	["a"] = { "<CMD>Alpha<CR>", "Startup Page" },
+	["b"] = {
+		"<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>",
+		"Buffers",
+	},
+	["e"] = { "<CMD>NvimTreeToggle<CR>", "File Tree" },
+	["w"] = { "<CMD>w!<CR>", "Save !" },
+	["q"] = { "<CMD>q!<CR>", "Quit !" },
+	-- ["c"] = { "<CMD>Bdelete!<CR>", "Close Buffer" },
+	["n"] = { "<CMD>nohlsearch<CR>", "nohl search" },
+	["f"] = {
+		"<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
+		"Find File in Project",
+	},
+	["F"] = { "<CMD>Telescope live_grep theme=ivy<CR>", "Find in Text" },
+	["p"] = { "<CMD>lua require('telescope').extensions.projects.projects()<CR>", "Recent Projects" },
+	["<CR>"] = { "<CMD>lua ReloadConfig()<CR>", "Reload Neovim Configs" },
+	P = {
+		name = "Packer",
+		c = { "<CMD>PackerCompile<CR>", "Compile" },
+		i = { "<CMD>PackerInstall<CR>", "Install" },
+		s = { "<CMD>PackerSync<CR>", "Sync All Plugins" },
+		S = { "<CMD>PackerStatus<CR>", "Plugin Status" },
+		u = { "<CMD>PackerUpdate<CR>", "Update All Plugins" },
+	},
+	G = {
+		name = "Git",
+		g = { "<CMD>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+		j = { "<CMD>lua require 'gitsigns'.next_hunk()<CR>", "Next Hunk" },
+		k = { "<CMD>lua require 'gitsigns'.prev_hunk()<CR>", "Prev Hunk" },
+		l = { "<CMD>lua require 'gitsigns'.blame_line()<CR>", "Blame" },
+		p = { "<CMD>lua require 'gitsigns'.preview_hunk()<CR>", "Preview Hunk" },
+		r = { "<CMD>lua require 'gitsigns'.reset_hunk()<CR>", "Reset Hunk" },
+		R = { "<CMD>lua require 'gitsigns'.reset_buffer()<CR>", "Reset Buffer" },
+		s = { "<CMD>lua require 'gitsigns'.stage_hunk()<CR>", "Stage Hunk" },
+		u = {
+			"<CMD>lua require 'gitsigns'.undo_stage_hunk()<CR>",
+			"Undo Stage Hunk",
+		},
+		o = { "<CMD>Telescope git_status<CR>", "Open changed file" },
+		b = { "<CMD>Telescope git_branches<CR>", "Checkout branch" },
+		c = { "<CMD>Telescope git_commits<CR>", "Checkout commit" },
+		d = {
+			"<CMD>Gitsigns diffthis HEAD<CR>",
+			"Diff",
+		},
+	},
+	L = {
+		name = "LSP",
+		a = { "<CMD>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
+		d = {
+			"<CMD>Telescope diagnostics bufnr=0<CR>",
+			"Document Diagnostics",
+		},
+		w = {
+			"<CMD>Telescope diagnostics<CR>",
+			"Workspace Diagnostics",
+		},
+		f = { "<CMD>lua vim.lsp.buf.format{async=true}<CR>", "Format Lines" },
+		i = { "<CMD>LspInfo<CR>", "Info" },
+		I = { "<CMD>LspInstallInfo<CR>", "Installer Info" },
+		j = {
+			"<CMD>lua vim.lsp.diagnostic.goto_next()<CR>",
+			"Next Diagnostic",
+		},
+		k = {
+			"<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>",
+			"Prev Diagnostic",
+		},
+		l = { "<CMD>lua vim.lsp.codelens.run()<CR>", "CodeLens Action" },
+		q = { "<CMD>lua vim.diagnostic.setloclist()<CR>", "Quickfix" },
+		r = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
+		s = { "<CMD>Telescope lsp_document_symbols<CR>", "Document Symbols" },
+		S = {
+			"<CMD>Telescope lsp_dynamic_workspace_symbols<CR>",
+			"Workspace Symbols",
+		},
+	},
+	S = {
+		name = "Search",
+		b = { "<CMD>Telescope git_branches<CR>", "Checkout branch" },
+		c = { "<CMD>Telescope colorscheme<CR>", "Colorscheme" },
+		h = { "<CMD>Telescope help_tags<CR>", "Find Help" },
+		M = { "<CMD>Telescope man_pages<CR>", "Man Pages" },
+		r = { "<CMD>Telescope oldfiles<CR>", "Edited Files" },
+		R = { "<CMD>Telescope registers<CR>", "Registers" },
+		k = { "<CMD>Telescope keymaps<CR>", "Keymaps" },
+		C = { "<CMD>Telescope commands<CR>", "Commands" },
+	},
+	T = {
+		name = "Terminal",
+		f = { "<CMD>ToggleTerm direction=float<CR>", "Float" },
+		h = { "<CMD>ToggleTerm size=10 direction=horizontal<CR>", "Open at Bottom" },
+		v = { "<CMD>ToggleTerm size=80 direction=vertical<CR>", "Open on Right" },
+	},
+}
+local opts = {
+	mode = "n", -- NORMAL mode
+	prefix = "<LEADER>",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
+which_key.setup(setup)
+which_key.register(mappings, opts)

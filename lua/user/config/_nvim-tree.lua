@@ -10,7 +10,7 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-nvim_tree.setup {
+nvim_tree.setup({
 	update_focused_file = {
 		enable = true,
 		update_cwd = true,
@@ -72,16 +72,16 @@ nvim_tree.setup {
 	view = {
 		width = 30,
 		side = "left",
-		number = true,
-		relativenumber = true,
+		number = false,
+		relativenumber = false,
 		mappings = {
 			list = {
-				{ key = { "<RIGHT>" }, cb = tree_cb "edit" },
-				{ key = { "<LEFT>" }, cb = tree_cb "close_node" },
-				{ key = { "<S-RIGHT>" }, cb = tree_cb "next_sibling" },
-				{ key = { "<S-LEFT>" }, cb = tree_cb "prev_sibling" },
-				{ key = { "<C-CR>" }, cb = tree_cb "cd" },
+				{ key = { "<RIGHT>" }, cb = tree_cb("edit") },
+				{ key = { "<LEFT>" }, cb = tree_cb("close_node") },
+				{ key = { "<S-RIGHT>" }, cb = tree_cb("next_sibling") },
+				{ key = { "<S-LEFT>" }, cb = tree_cb("prev_sibling") },
+				{ key = { "<C-CR>" }, cb = tree_cb("cd") },
 			},
 		},
 	},
-}
+})

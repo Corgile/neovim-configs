@@ -4,7 +4,7 @@ local keymap = vim.keymap.set
 local opts = { silent = true }
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+keymap("", "<SPACE>", "<NOP>", opts)
 vim.g.mapleader = " "
 
 -- Modes
@@ -16,7 +16,7 @@ vim.g.mapleader = " "
 --   command_mode = "c",
 
 -- Normal --
-keymap("n", "<M-CR>", "@q<CMD>lua print('重复上一次操作')<CR>")
+keymap("n", "<M-CR>", "@q<CMD>echo '重复上一次操作'<CR>")
 -- home / end
 keymap("n", "<S-LEFT>", "^")
 keymap("n", "<S-RIGHT>", "$")
@@ -34,7 +34,7 @@ keymap("n", "<C-DOWN>", "<C-w>j", opts)
 keymap("n", "<C-UP>", "<C-w>k", opts)
 keymap("n", "<C-LEFT>", "<C-w>h", opts)
 keymap("n", "<C-RIGHT>", "<C-w>l", opts)
-keymap("n", "<LEADER>r", "<CMD>luafile %<CR><CMD>lua print('已重新载入当前文件')<CR>", opts)
+keymap("n", "<LEADER>r", "<CMD>luafile %<CR><CMD>echo '已重新载入当前文件'<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-k>", ":resize -2<CR>", opts)
@@ -44,8 +44,9 @@ keymap("n", "<C-h>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<M-RIGHT>", ":bnext<CR>", opts)
-keymap("n", "<M-LEFT>",  ":bprevious<CR>", opts)
-keymap("n", "<LEADER>x",  ":BufferLinePickClose<CR>", opts)
+keymap("n", "<M-LEFT>", ":bprevious<CR>", opts)
+keymap("n", "<LEADER>x", ":BufferLinePickClose<CR>", opts)
+keymap("n", "<LEADER>c", ":Bdelete<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<LEADER>n", "<CMD>nohlsearch<CR>", opts)

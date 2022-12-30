@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de7557f3-e05b-447b-971e-2c1e4e8b250a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lua/user/config/_which-key.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ftplugin/java.lua" beforeDir="false" afterPath="$PROJECT_DIR$/ftplugin/java.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_bufferline.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_bufferline.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_illuminate.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_illuminate.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_impatient.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_impatient.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_nvim-tree.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_nvim-tree.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_project.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_project.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_telescope.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_telescope.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/_toggleterm.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/_toggleterm.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/config/init.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/config/init.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/core/_autocommands.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/core/_autocommands.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/core/_colorscheme.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/core/_colorscheme.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/core/_keymaps.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/core/_keymaps.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/core/_options.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/core/_options.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/lsp/handlers.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/lsp/handlers.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/lsp/mason.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/lsp/mason.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/lsp/null-ls.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/lsp/null-ls.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/lsp/settings/pyright.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/lsp/settings/pyright.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/lsp/settings/sumneko_lua.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/lsp/settings/sumneko_lua.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/packer.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/packer.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/ui/_alpha.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/ui/_alpha.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/ui/_gitsigns.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/ui/_gitsigns.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/ui/_indentline.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/ui/_indentline.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/ui/_lualine.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/ui/_lualine.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua/user/ui/_treesitter.lua" beforeDir="false" afterPath="$PROJECT_DIR$/lua/user/ui/_treesitter.lua" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="$USER_HOME$/Public/environment/mvnd/mvn/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2IgH0uG9o34qKrWukYWhodcnPpZ" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/alejandra/Workspace/IdeaProjects",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de7557f3-e05b-447b-971e-2c1e4e8b250a" name="Changes" comment="" />
+      <created>1670596089241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670596089241</updated>
+    </task>
+    <servers />
+  </component>
+</project>
