@@ -57,7 +57,6 @@ local plugins = {
     lazy = false,
     opts = overrides.cmaketools,
     config = function(_, opts)
-      vim.notify("Loading cmake-tools.nvim", vim.log.levels.WARN)
       require("cmake-tools").setup(opts)
     end,
   },
