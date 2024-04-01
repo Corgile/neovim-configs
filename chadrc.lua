@@ -28,8 +28,8 @@ end
 
 
 M.ui = {
-  theme = "everblush",
-  theme_toggle = { "everblush", "github_light" },
+  theme = "oxocarbon",
+  theme_toggle = { "oxocarbon", "oxocarbon" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
